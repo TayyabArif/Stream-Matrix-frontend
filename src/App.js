@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import theme from "./theme";
+import { ThemeProvider } from "@mui/system";
+import { Routes, Route } from "react-router-dom";
+import Register from "./Pages/Register";
+import Login from "./Pages/Login";
+import Main from "./Pages/Main";
+import Home from "./Pages/Home";
+import Order from "./Pages/Order";
+import LegalCenter from "./Pages/LegalCenter/Main";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Routes>
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+        <Route
+          path="/"
+          element={
+           <Main>
+            <Home />
+           </Main>
+          }
+        />
+        <Route
+          path="/create-package"
+          element={
+           <Main>
+            <Order />
+           </Main>
+          }
+        />
+        <Route
+          path="/legal-center"
+          element={
+           <Main>
+            <LegalCenter />
+           </Main>
+          }
+        />
+      </Routes>
+    </ThemeProvider>
   );
 }
 
