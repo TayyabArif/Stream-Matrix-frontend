@@ -3,9 +3,8 @@ import React from 'react'
 import { useState } from "react";
 import styled from "styled-components";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
-import FeaturedCard from './FeaturedCard';
 import { sliderItems } from "../../Assets/data";
-import TopVideosCard from './TopVideosCard';
+import TopVideosCard from '../Home/TopVideosCard';
 
 
 const Arrow = styled.div`
@@ -39,7 +38,7 @@ const Slide = styled.div`
   align-items: center;
 `
 
-const TopVideosSlider = ({name}) => {
+const Favourites = ({name}) => {
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === "left") {
@@ -66,12 +65,12 @@ const TopVideosSlider = ({name}) => {
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
           <Slide key={item.id}>
-            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1666853074324x432(3).jpg'/>
-            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1666853074324x432(3).jpg'/>
-            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1666853074324x432(3).jpg'/>
-            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1666853074324x432(3).jpg'/>
-            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1666853074324x432(3).jpg'/>
-            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1666853074324x432(3).jpg'/>
+            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1664968790324x432.jpg'/>
+            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1664968790324x432.jpg'/>
+            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1664968790324x432.jpg'/>
+            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1664968790324x432.jpg'/>
+            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1664968790324x432.jpg'/>
+            <TopVideosCard src='https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1664968790324x432.jpg' />
           </Slide>
         ))}
       </Wrapper>
@@ -83,4 +82,4 @@ const TopVideosSlider = ({name}) => {
   )
 }
 
-export default TopVideosSlider
+export default Favourites;

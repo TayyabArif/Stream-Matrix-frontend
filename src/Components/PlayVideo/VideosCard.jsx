@@ -15,19 +15,17 @@ const Image = styled.img`
     margin-left: 60px;
     border-radius: 50%;
 `
-export default function FeaturedCard({title, src}) {
+export default function VideosCard() {
   const navigate = useNavigate()
   const handleChange = (event) => {
-    navigate('/play')
+    navigate('/offers')
   };
   return (
-    <Card sx={{ maxWidth: 350, minWidth: 290, ml: 4 , width: '100%'}} style={{cursor: 'pointer', backgroundImage: 'https://d34080pnh6e62j.cloudfront.net/images/channels/ChannelFeaturedWebthumb/16690988421020x576.jpg'}} onClick={()=> handleChange()}>
-      {/* <CardContent >
-      </CardContent> */}
+    <Card sx={{ maxWidth: 220, ml: 4, mb: 2 , width: '100%'}} style={{cursor: 'pointer', backgroundImage: 'https://d34080pnh6e62j.cloudfront.net/images/channels/ChannelFeaturedWebthumb/16690988421020x576.jpg'}} onClick={()=> handleChange()}>
       <CardMedia
         component="img"
-        height="240"
-        image="https://d34080pnh6e62j.cloudfront.net/images/channels/ChannelFeaturedWebthumb/16690988421020x576.jpg"
+        height="280"
+        image="https://d34080pnh6e62j.cloudfront.net/images/NewVideoOnDemandThumb/1667816533324x432.jpg"
         alt="Featured"
       />
     </Card>

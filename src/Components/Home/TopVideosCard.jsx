@@ -13,7 +13,7 @@ import "../../Styles/TopVideos.css"
 export default function TopVideosCard({src}) {
   const navigate = useNavigate()
   const handleChange = (event) => {
-    navigate('/offers')
+    navigate('/play')
   };
   return (
     <Card sx={{ maxWidth: 190, minWidth: 190, ml: 6 , width: '100%'}} className='card' onClick={()=> handleChange()}>

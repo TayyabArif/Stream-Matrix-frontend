@@ -8,26 +8,19 @@ import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom';
+import "../../Styles/TopVideos.css"
 
-const Image = styled.img`
-    height: 70px;
-    width: 70px;
-    margin-left: 60px;
-    border-radius: 50%;
-`
-export default function FeaturedCard({title, src}) {
+export default function EventCard({src}) {
   const navigate = useNavigate()
   const handleChange = (event) => {
-    navigate('/play')
+    navigate('/offers')
   };
   return (
-    <Card sx={{ maxWidth: 350, minWidth: 290, ml: 4 , width: '100%'}} style={{cursor: 'pointer', backgroundImage: 'https://d34080pnh6e62j.cloudfront.net/images/channels/ChannelFeaturedWebthumb/16690988421020x576.jpg'}} onClick={()=> handleChange()}>
-      {/* <CardContent >
-      </CardContent> */}
+    <Card sx={{ maxWidth: 190, minWidth: 190 , width: '100%'}} className='card' onClick={()=> handleChange()}>
       <CardMedia
         component="img"
         height="240"
-        image="https://d34080pnh6e62j.cloudfront.net/images/channels/ChannelFeaturedWebthumb/16690988421020x576.jpg"
+        image={src}
         alt="Featured"
       />
     </Card>
