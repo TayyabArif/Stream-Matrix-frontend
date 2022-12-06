@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.custom-link:hover {
+  /* color: red; */
+  text-decoration-color: red;
+  /* border-bottom: "2px solid blue" */
+}
+.video-bg{
+  height: '100vh';
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    rgba(100, 10, 0, 0.5)
+  ),
+    url("https://d34080pnh6e62j.cloudfront.net/images/bilalimages/banners/1668408605Web Banner.jpg")
+      center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-ellipse {
+  display: inline-block;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.video-player {
+  width: '100%'
+}

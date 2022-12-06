@@ -5,32 +5,28 @@ import InternationalShowsSlider from '../../Components/Home/InternationShowsSlid
 import KidsShowsSlider from '../../Components/Home/KidsShowSlider';
 import LocalShowsSlider from '../../Components/Home/LocalShowsSlider';
 import Slider from '../../Components/Home/Slider';
+import { Live } from '../../Assets/data';
+import Favourites from '../../Components/Movies/Favourites';
+import TopVideosCard from '../../Components/Home/TopVideosCard';
 import TopVideosSlider from '../../Components/Home/TopVideos';
-import { sliderItems } from '../../Assets/data';
 
-const Home = () => {
+const LiveContainer = () => {
   return (
     <Grid container direction='column' sx={{width: '100%', height: '100%'}}>
-      <Grid container item sx={{ width: "100%", height: "30%" }}>
-        <Slider sliderItems= {sliderItems}/>
+      <Grid container item sx={{ width: "100%", height: "40%" }}>
+        <Slider sliderItems= {Live}/>
       </Grid>
       <Grid container item sx={{ width: "100%", height: "15%" }}>
-        <FeaturedSlider name = 'Featured'/>
+        <TopVideosSlider name = 'Live Matches'/>
+      </Grid>
+      {/* <Grid container item sx={{ width: "100%", height: "15%" }}>
+        <TopVideosSlider name = 'Kids Tv Shows'/>
       </Grid>
       <Grid container item sx={{ width: "100%", height: "15%" }}>
-        <TopVideosSlider name = 'Top Views Videos'/>
-      </Grid>
-      <Grid container item sx={{ width: "100%", height: "10%" }}>
-        <LocalShowsSlider />
-      </Grid>
-      <Grid container item sx={{ width: "100%", height: "15%" }}>
-        <InternationalShowsSlider />
-      </Grid>
-      <Grid container item sx={{ width: "100%", height: "15%" }}>
-        <KidsShowsSlider />
-      </Grid>
+        <TopVideosSlider name= 'Kids Educational Shows'/>
+      </Grid> */}
     </Grid>
   )
 }
 
-export default Home;
+export default LiveContainer;

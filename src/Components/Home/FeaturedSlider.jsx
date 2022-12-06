@@ -38,7 +38,7 @@ const Slide = styled.div`
   align-items: center;
 `
 
-const FeaturedSlider = () => {
+const FeaturedSlider = ({name}) => {
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === "left") {
@@ -55,7 +55,7 @@ const FeaturedSlider = () => {
         fontWeight = 'bold'
         sx={{color: 'white'}}
         >
-          Featured
+          {name}
         </Typography>
       </Grid>
       <Grid container item>
